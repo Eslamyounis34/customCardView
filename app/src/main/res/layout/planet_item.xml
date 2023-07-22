@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:background="@color/main_color"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/first"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="0dp"
+            card_view:cardBackgroundColor="@color/material_dynamic_neutral30"
+            android:layout_marginRight="3dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            card_view:cardUseCompatPadding="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/planetName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Earth"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/planetDistance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/planetName"
+                    android:layout_marginTop="5dp"
+                    android:textColor="#B2B2B2"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/planetGravity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/planetDistance"
+                    android:layout_marginTop="2dp"
+                    android:textColor="#B2B2B2"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/planetDiameter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/planetGravity"
+                    android:layout_marginTop="2dp"
+                    android:textColor="#B2B2B2"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/planetImage"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="90dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/planet_three"
+        app:layout_constraintBottom_toBottomOf="@id/frameLayout"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toTopOf="@id/frameLayout"
+        card_view:layout_constraintEnd_toStartOf="@+id/frameLayout"
+        card_view:layout_constraintStart_toStartOf="parent"
+        card_view:layout_constraintHeight_percent=".25"
+        card_view:layout_constraintWidth_percent=".25" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
