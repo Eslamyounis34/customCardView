@@ -20,7 +20,7 @@
             android:layout_marginLeft="40dp"
             android:layout_marginRight="3dp"
             app:cardCornerRadius="12dp"
-            android:backgroundTint="#2C2C2C"
+            android:backgroundTint="#212121"
             app:cardElevation="4dp"
             >
 
